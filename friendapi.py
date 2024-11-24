@@ -2,7 +2,6 @@ import requests
 import csv
 from datetime import date
 
-
 userID = 1123120136
 csvFile = "log.csv"
 
@@ -13,7 +12,6 @@ def getUserFriendsID():
     FriendsID = [i["id"] for i in friendList]
 
     return FriendsID
-
 
 def CSVEmpty():
     FriendsID = getUserFriendsID()
@@ -54,8 +52,5 @@ def CSVUpdate():
         csvWriter.writerow([FriendsID, Changes, date.today()])
     
     return Changes
-
-
-
 
 print(CSVUpdate())
